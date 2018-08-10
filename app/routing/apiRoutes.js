@@ -11,18 +11,21 @@ app.use(bodyParser.json());
 
 var friends = [];
 
-app.get("/api/friends", function(req,res){
+module.exports = function(app){
 
-    return res.json(friends);
+    app.get("/api/friends", function(req,res){
 
-});
+        return res.json(friends);
 
-app.post("/api/friends", function(req,res){
+    });
 
-    var newUser = "";
+    app.post("/api/friends", function(req,res){
 
-    friends.push(newUser);
+        var newUser = "";
 
-    res.json(newUser);
+        friends.push(newUser);
 
-});
+        res.json(newUser);
+
+    });
+;}
