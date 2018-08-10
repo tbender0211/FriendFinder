@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="survey">
 
         <h1>All the Questions</h1>
 
@@ -220,18 +221,12 @@
         <br>
 
 
-    </div>
-
     
 
-    <div class="container">
 
     <hr>
 
         <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#showFriend" id="submit">Find me some friends!</button>
-
-
-    </div>
 
     <div class = "modal fade" id="showFriend" tabindex="-1" role="dialog" arialavelledby="modalTitle" aria-hidden="true">
 
@@ -269,7 +264,7 @@
 
     </div>
 
-    <hr>
+    </div>
 
     <div class="footer">
         <div class="container">
@@ -311,5 +306,17 @@
 
     });
 </script>
+
+<style>
+    body {
+        font-family: "Roboto Condensed", sans-serif;
+    }
+
+    #survey {
+        border: 2px solid black;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+</style>
 
 </body>
