@@ -307,7 +307,7 @@
             };
         });
 
-        $.post("/api/user", newUser, function(data){
+        $.post("/api/users", newUser, function(data){
             if (data) {
                 console.log("New FriendFinder user added.");
             } else {
