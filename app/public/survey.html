@@ -277,7 +277,10 @@
     </div>
 
 <script>
-    $("#submit").on("click", function(){
+    $("#submit").on("click", function(event){
+        
+        event.preventDefault();
+
         var newUser = {
             name: $("#name").val(),
             pic: $("#photo").val(),
@@ -307,16 +310,24 @@
     });
 </script>
 
+
+
+</body>
+
+</html>
+
 <style>
     body {
+
         font-family: "Roboto Condensed", sans-serif;
+
     }
 
     #survey {
+
         border: 2px solid black;
         padding: 20px;
         margin-bottom: 20px;
+        
     }
 </style>
-
-</body>
