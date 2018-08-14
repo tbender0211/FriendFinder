@@ -12,11 +12,9 @@ module.exports = function(app){
 
     app.post("/api/friends", function(req,res){
 
-        var friends = [];
+        friends.push(req.body);
 
-        friends.push(newUser);
-
-        res.json(newUser);
+        res.json(true);
 
 
     });
