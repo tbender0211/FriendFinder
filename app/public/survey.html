@@ -296,11 +296,19 @@
             q10: parseInt($("#q10 option:selected").text()),
         };
 
-        console.log(newUser); 
+        console.log(newUser);
 
-        $.post("/api/friends", newUser, function(data){
+        $.get("/api/users", function(data){
+            for(i=0; i < users.length; i++){
+
+                var friendScore = 0;
+
+            };
+        });
+
+        $.post("/api/user", newUser, function(data){
             if (data) {
-                console.log("You made a new friend!");
+                console.log("New FriendFinder user added.");
             } else {
                 console.log("Sorry, no matches.")
             }
