@@ -1,6 +1,4 @@
-var friends = [];
-
-var users = [
+var friends = [
     {
         name: "Sylvanas",
         pic: "",
@@ -18,4 +16,3 @@ var users = [
 ];
 
 module.exports = friends;
-module.exports = users;

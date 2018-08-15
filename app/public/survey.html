@@ -281,25 +281,39 @@
 
         event.preventDefault();
 
+//         var newUser = {
+//             name: $("#name").val(),
+//             pic: $("#photo").val(),
+//             q1: parseInt($("#q1 option:selected").text()),
+//             q2: parseInt($("#q2 option:selected").text()),
+//             q3: parseInt($("#q3 option:selected").text()),
+//             q4: parseInt($("#q4 option:selected").text()),
+//             q5: parseInt($("#q5 option:selected").text()),
+//             q6: parseInt($("#q6 option:selected").text()),
+//             q7: parseInt($("#q7 option:selected").text()),
+//             q8: parseInt($("#q8 option:selected").text()),
+//             q9: parseInt($("#q9 option:selected").text()),
+//             q10: parseInt($("#q10 option:selected").text()),
+//         };
+
         var newUser = {
             name: $("#name").val(),
             pic: $("#photo").val(),
-            q1: parseInt($("#q1 option:selected").text()),
-            q2: parseInt($("#q2 option:selected").text()),
-            q3: parseInt($("#q3 option:selected").text()),
-            q4: parseInt($("#q4 option:selected").text()),
-            q5: parseInt($("#q5 option:selected").text()),
-            q6: parseInt($("#q6 option:selected").text()),
-            q7: parseInt($("#q7 option:selected").text()),
-            q8: parseInt($("#q8 option:selected").text()),
-            q9: parseInt($("#q9 option:selected").text()),
-            q10: parseInt($("#q10 option:selected").text()),
-            total: q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10
+            q1: parseInt($("#q1").val()),
+            q2: parseInt($("#q2").val()),
+            q3: parseInt($("#q3").val()),
+            q4: parseInt($("#q4").val()),
+            q5: parseInt($("#q5").val()),
+            q6: parseInt($("#q6").val()),
+            q7: parseInt($("#q7").val()),
+            q8: parseInt($("#q8").val()),
+            q9: parseInt($("#q9").val()),
+            q10: parseInt($("#q10").val())
         };
 
         console.log(newUser);
 
-        $.get("/api/users", function(data){
+        $.get("/api/friends", function(data){
             for(i=0; i < users.length; i++){
 
                 var friendScore = 0;
@@ -307,9 +321,9 @@
             };
         });
 
-        $.post("/api/users", newUser, function(data){
+        $.post("/api/friends", newUser, function(data){
             if (data) {
-                console.log("New FriendFinder user added.");
+                console.log("New Friend added.");
             } else {
                 console.log("Sorry, no matches.")
             }
